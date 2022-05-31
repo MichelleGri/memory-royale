@@ -20,5 +20,11 @@ body {
 .logo {
     height: 12rem;
     width: auto;
+}
 
+h1 {
+    font-size: 4rem;
+    color: #681343;
+    padding: 2rem;
+    letter-spacing: 0.1rem;
 }
