@@ -13,6 +13,12 @@ body {
     max-width: 1500px;
     margin: 0.005rem auto;
     background-color: #eaefec;
-    font-family: "Varela", sans-serif;
+    font-family: "Varela Round", sans-serif;
     text-align: center;
+}
+
+.logo {
+    height: 12rem;
+    width: auto;
+
 }
