@@ -28,3 +28,20 @@ h1 {
     padding: 2rem;
     letter-spacing: 0.1rem;
 }
+
+.game-area {
+    background-color: gray;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1rem;
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.game-card {
+    width: 210px;
+    height: 210px;
+    background-color: #9eb176;
+    border-radius: 1rem;
+}
