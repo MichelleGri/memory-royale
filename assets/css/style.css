@@ -43,9 +43,15 @@ h1 {
     border-radius: 1rem;
 }
 
-.game-card {
+.front-card {
     width: 210px;
     height: 210px;
-    background-color: #681343;
     border-radius: 1rem;
+}
+
+.back-card {
+    width: 210px;
+    height: 210px;
+    border-radius: 1rem;
+    background-color: #681343;
 }
