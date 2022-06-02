@@ -9,44 +9,6 @@
 
 // console.log(gameCards);
 
-// const flipCard = function () {
-//     document.querySelectorAll('.game-card').addEventListener('click')
-// }
-
-// function runGame() {
-// }
-
-// function score() {
-// }
-
-// function highScore() {
-// }
-
-// function checkMatch() {
-// }
-
-// function correctMatch() {
-// }
-
-// function wrongMatch() {
-// }
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     gameBoard(game - area, gameCards);
-//     suffleCards();
-//     play.addEventListener('click', replay);
-// })
-
-// const gameCards = document.getElementsByClassName('front-card');
-
-// const randomCards = function (gameCards) {
-
-//     for (let i = 0; i < gameCards.length; i++) {
-
-//         gameCards[Math.floor(Math.random() * gameCards.length)];
-
-//     }
-// }
 
 const cards = document.querySelectorAll('.card');
 
@@ -55,3 +17,10 @@ const cards = document.querySelectorAll('.card');
         card.classList.toggle('is-flipped');
     });
 });
+
+function shuffleCards() {
+    for (let i = 0; i < cards.length; i++) {
+        const randomCards = Math.floor(Math.random() * cards.length);
+        return randomCards;
+    }
+}
