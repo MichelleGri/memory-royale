@@ -1,70 +1,57 @@
-// 'use strict';
-
-// Wait for the DOM to finish loading before running the Gamepad
+// Wait for the DOM to finish loading before running the game
 
 // document.addEventListener("DOMContentLoaded", function () {
 //     let buttons = document.getElementsByTagName("button");
 
 //     let images = document.getElementsByTagName("img");
 
-//     for (let images of images) {
-//         images.addEventListener("click", function () {
-//             if (this.getAttribute("data-type") === "img") {
-//                 alert("You clicked on an Image!");
-//                 else
-//             }
-//         })
-//     }
-// })
+// const gameCards = document.querySelectorAll('.game-card');
 
+// console.log(gameCards);
 
-
-// const cardsArray = [
-//     document.getElementsByClassName('game-card')
-// ]
-// console.log(cardsArray);
-
-const cardsArray = [];
-
-cardsArray.push('assets/images/augustin.jpeg');
-cardsArray.push('assets/images/alma.jpeg');
-cardsArray.push('assets/images/antonio.jpeg');
-cardsArray.push('assets/images/bruno.jpeg');
-
-// console.log(cardsArray);
-
-const randomCards = cardsArray[Math.floor(Math.random() * cardsArray.length)];
-
-console.log(randomCards);
-
-
-// for (let i = 0; i < cardsArray.length; i++) {
-//     console.log(cardsArray);
+// const flipCard = function () {
+//     document.querySelectorAll('.game-card').addEventListener('click')
 // }
 
+// function runGame() {
+// }
 
+// function score() {
+// }
 
-function runGame() {
+// function highScore() {
+// }
 
-}
+// function checkMatch() {
+// }
 
-function score() {
+// function correctMatch() {
+// }
 
-}
+// function wrongMatch() {
+// }
 
-function highScore() {
+// document.addEventListener('DOMContentLoaded', function () {
+//     gameBoard(game - area, gameCards);
+//     suffleCards();
+//     play.addEventListener('click', replay);
+// })
 
-}
+// const gameCards = document.getElementsByClassName('front-card');
 
-function checkMatch() {
+// const randomCards = function (gameCards) {
 
-}
+//     for (let i = 0; i < gameCards.length; i++) {
 
+//         gameCards[Math.floor(Math.random() * gameCards.length)];
 
-function correctMatch() {
+//     }
+// }
 
-}
+const cards = document.querySelectorAll('.card');
 
-function wrongMatch() {
-
-}
+[...cards].forEach((card) => {
+    card.addEventListener('click', function () {
+        card.classList.toggle('is-flipped');
+    });
+});
