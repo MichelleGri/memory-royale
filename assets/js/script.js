@@ -1,19 +1,34 @@
 // Wait for the DOM to finish loading before running the game
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     let buttons = document.getElementsByTagName("button");
+
+document.addEventListener("DOMContentLoaded", function () {
+
+// display game board
+    const gameCards = document.querySelectorAll('.game-card');
+
+// shuffle cards on game board
+    (function shuffle() {
+        gameCards.forEach(card => {
+            let randomCards = Math.floor(Math.random() * gameCards.length);
+            card.style.order = randomCards;
+        });
+    })();
+
+
+})
 
 //     let images = document.getElementsByTagName("img");
 
-// const gameCards = document.querySelectorAll('.game-card');
 
-// console.log(gameCards);
 
 
 // Selecting elements
+
 const cards = document.querySelectorAll('.card');
 
-const gameCards = document.querySelectorAll('.game-card');
+let firstCard;
+let secondCard;
+let cardIsFlipped = false;
 
 // Clicking cards to flip over
 [...cards].forEach((card) => {
@@ -22,25 +37,30 @@ const gameCards = document.querySelectorAll('.game-card');
     });
 });
 
-(function shuffle() {
-    gameCards.forEach(card => {
-        let randomCards = Math.floor(Math.random() * 24);
-        card.style.order = randomCards;
-    });
-})();
 
-let firstCard;
-let secondCard;
 
-function runGame() {
-    if (firstCard.dataset.character === secondCard.dataset.character) {
-        firstCard.removeEventListener('click', 'flipcard');
-        secondCard.removeEventListener('click', 'flipcard');
+function flipCard() {
+    cards.classList.add('is-flipped');
+
+    if (!cardIsFlipped) {
+        cardIsFlipped = true;
+        firstCard = cards;
     } else {
-        firstCard.classList.remove('flip');
-        secondCard.classList.remove('flip');
+        cardIsFlipped = false;
+        secondCard = cards;
+    }
+    return flipCard;
+};
+
+function checkMatch() {
+    if (firstCard.dataset.character === secondCard.dataset.character) {
+        firstCard.removeEventListener('click', 'is-flipped');
+        secondCard.removeEventListener('click', 'is-flipped');
+    } else {
+        firstCard.classList.remove('is-flipped');
+        secondCard.classList.remove('is-flipped');
     };
-    return runGame;
+    return checkMatch;
 }
 
 
