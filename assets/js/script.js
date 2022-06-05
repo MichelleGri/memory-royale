@@ -1,99 +1,75 @@
 // Wait for the DOM to finish loading before running the game
 
-
 document.addEventListener("DOMContentLoaded", function () {
 
-// display game board
+    // display game board
     const gameCards = document.querySelectorAll('.game-card');
 
-// shuffle cards on game board
-    (function shuffle() {
+    // shuffle cards on game board
+    function shuffle() {
         gameCards.forEach(card => {
-            let randomCards = Math.floor(Math.random() * gameCards.length);
+            let randomCards = Math.trunc(Math.random() * gameCards.length);
             card.style.order = randomCards;
         });
-    })();
+    };
+    shuffle();
+});
 
+/**
+ * The main game "loop", called when the script is first loaded
+ * and after the user's selections have been processed
+ */
 
-})
-
-//     let images = document.getElementsByTagName("img");
-
-
-
-
-// Selecting elements
+// Creating variables
 
 const cards = document.querySelectorAll('.card');
 
-let firstCard;
-let secondCard;
-let cardIsFlipped = false;
-
 // Clicking cards to flip over
-[...cards].forEach((card) => {
-    card.addEventListener('click', function () {
-        card.classList.toggle('is-flipped');
-    });
-});
-
-
+// [...cards].forEach((card) => {
+//     card.addEventListener('click', function () {
+//         card.classList.toggle('flipCard');
+//     });
+// });
 
 function flipCard() {
-    cards.classList.add('is-flipped');
+    this.classList.toggle('.flipCard');
+}
+
+cards.forEach(card => card.addEventListener('click', flipCard));
+
+flipCard();
+
+
+// flip two cards
+
+let card1;
+let card2;
+let cardIsFlipped = false;
+
+function flipCard() {
+    this.classList.toggle('flip');
 
     if (!cardIsFlipped) {
         cardIsFlipped = true;
-        firstCard = cards;
-    } else {
-        cardIsFlipped = false;
-        secondCard = cards;
-    }
-    return flipCard;
+        card1 = this;
+        return;
+    };
+
+    card2 = this;
+    cardIsFlipped = false;
+
+    checkMatch();
 };
 
+// check if cards match
+
 function checkMatch() {
-    if (firstCard.dataset.character === secondCard.dataset.character) {
-        firstCard.removeEventListener('click', 'is-flipped');
-        secondCard.removeEventListener('click', 'is-flipped');
+    if (card1.dataset.character === card2.dataset.character) {
+        card1.removeEventListener('click', 'flipCard');
+        card2.removeEventListener('click', 'flipCard');
     } else {
-        firstCard.classList.remove('is-flipped');
-        secondCard.classList.remove('is-flipped');
+        card1.classList.remove('flipCard');
+        card2.classList.remove('flipCard');
     };
-    return checkMatch;
-}
-
-
-
-// let cardIsFlipped = false;
-// let firstCard;
-// let secondCard;
-
-// function flipCard() {
-//     cards.classList.add('flip');
-
-//     if (!cardIsFlipped) {
-//         cardIsFlipped = true;
-//         firstCard = cards;
-//     } else {
-//         cardIsFlipped = false;
-//         secondCard = cards;
-//     }
-// };
-
-// function cardsMatch() {
-//     // check if cards match
-//     if (firstCard.dataset.character ===
-//         secondCard.dataset.character) {
-//         // if the cards match
-//         firstCard.removeEventListenter('click', flipCard);
-//         secondCard.removeEventListenter('click', flipCard);
-//         // if the cards do not match
-//     } else {
-//         setTimeout(() => {
-//             firstCard.classList.remove('flip');
-//             secondCard.classList.remove('flip');
-//         }, 5000);
-//     }
-//     return cardsMatch;
-// }
+    checkMatch();
+};
