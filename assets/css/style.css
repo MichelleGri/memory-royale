@@ -97,7 +97,7 @@ img {
 
 
 
-button {
+.play {
     /* background-color: #B6C599; */
     width: 10rem;
     height: 4rem;
@@ -109,6 +109,10 @@ button {
     font-family: "Varela Round", sans-serif;
     color: #681343;
     font-weight: bold;
+}
+
+.play:hover {
+    background-color: #B6C599;
 }
 
 .score-area {
