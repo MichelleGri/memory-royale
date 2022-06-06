@@ -84,3 +84,6 @@ function nextTurn() {
     card1 = null;
     card2 = null;
 };
+
+// display message 
+
