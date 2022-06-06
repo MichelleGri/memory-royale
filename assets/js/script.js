@@ -50,15 +50,11 @@ document.querySelector('.play').addEventListener('click', function () {
 
 });
 
+// decrease score
 
-// display score
-
-const decreaseScore = function () {
-    let incorrectMatch = card1.dataset.character !== card2.dataset.character;
-    if (incorrectMatch) {
-        score--;
-        document.querySelector('.score').textContent = score;
-    };
+function decreaseScore() {
+    score--;
+    document.querySelector('.score').textContent = score;
 };
 
 // Clicking cards to flip over
@@ -89,6 +85,7 @@ function checkMatch() {
     } else {
         flipOverCards();
         displayMessage('😊 Keep guessing!');
+        decreaseScore();
     };
 };
 
