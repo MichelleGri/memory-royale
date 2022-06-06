@@ -65,7 +65,7 @@ img {
     transform-origin: center right;
 }
 
-.card.flipCard {
+.card.flip {
     transform: translateX(-100%) rotateY(-180deg);
 }
 

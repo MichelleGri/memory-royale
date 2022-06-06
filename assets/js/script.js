@@ -23,53 +23,49 @@ document.addEventListener("DOMContentLoaded", function () {
 // Creating variables
 
 const cards = document.querySelectorAll('.card');
-
-// Clicking cards to flip over
-// [...cards].forEach((card) => {
-//     card.addEventListener('click', function () {
-//         card.classList.toggle('flipCard');
-//     });
-// });
-
-function flipCard() {
-    this.classList.toggle('.flipCard');
-}
-
-cards.forEach(card => card.addEventListener('click', flipCard));
-
-flipCard();
-
-
-// flip two cards
-
 let card1;
 let card2;
 let cardIsFlipped = false;
 
+// Clicking cards to flip over
+
 function flipCard() {
-    this.classList.toggle('flip');
+    this.classList.add('flip');
 
     if (!cardIsFlipped) {
         cardIsFlipped = true;
         card1 = this;
         return;
     };
-
     card2 = this;
-    cardIsFlipped = false;
 
     checkMatch();
-};
+}
+
+cards.forEach(card => card.addEventListener('click', flipCard));
+
 
 // check if cards match
 
+let correctMatch = card1.dataset.character === card2.dataset.character;
+
 function checkMatch() {
-    if (card1.dataset.character === card2.dataset.character) {
+    if (correctMatch) {
         card1.removeEventListener('click', 'flipCard');
         card2.removeEventListener('click', 'flipCard');
     } else {
         card1.classList.remove('flipCard');
         card2.classList.remove('flipCard');
     };
-    checkMatch();
 };
+
+
+
+
+// Clicking cards to flip over
+
+// [...cards].forEach((card) => {
+//     card.addEventListener('click', function () {
+//         card.classList.toggle('flipCard');
+//     });
+// });
