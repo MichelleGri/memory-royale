@@ -43,7 +43,7 @@ function flipCard() {
     card2 = this;
 
     checkMatch();
-}
+};
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
@@ -65,7 +65,7 @@ function remainFlipped() {
     card2.removeEventListener('click', flipCard);
 
     nextTurn();
-}
+};
 
 // cards to flip over if they do not match
 function flipOverCards() {
@@ -75,12 +75,12 @@ function flipOverCards() {
         card2.classList.remove('flip');
         nextTurn();
     }, 3000);
-}
+};
 
-// reset card values to next turn
+// reset card values for next turn
 function nextTurn() {
     cardIsFlipped = false;
     disableFlipping = false;
     card1 = null;
     card2 = null;
-}
+};
