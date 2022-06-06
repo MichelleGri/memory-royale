@@ -26,10 +26,12 @@ const cards = document.querySelectorAll('.card');
 let card1;
 let card2;
 let cardIsFlipped = false;
+let disableFlipping = false;
 
 // Clicking cards to flip over
 
 function flipCard() {
+    if (disableFlipping) return;
     this.classList.add('flip');
 
     if (!cardIsFlipped) {
@@ -38,6 +40,7 @@ function flipCard() {
         return;
     };
     card2 = this;
+    cardIsFlipped = false;
 
     checkMatch();
 }
@@ -47,20 +50,31 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 // check if cards match
 
-let correctMatch = card1.dataset.character === card2.dataset.character;
+
 
 function checkMatch() {
+    let correctMatch = card1.dataset.character === card2.dataset.character;
+
     if (correctMatch) {
-        card1.removeEventListener('click', 'flipCard');
-        card2.removeEventListener('click', 'flipCard');
+        remainFlipped();
     } else {
-        card1.classList.remove('flipCard');
-        card2.classList.remove('flipCard');
+        flipOverCards();
     };
 };
 
+function remainFlipped() {
+    card1.removeEventListener('click', flipCard);
+    card2.removeEventListener('click', flipCard);
+}
 
+function flipOverCards() {
+    setTimeout(() => {
+        card1.classList.remove('flip');
+        card2.classList.remove('flip');
+    }, 3000);
+}
 
+// }
 
 // Clicking cards to flip over
 
