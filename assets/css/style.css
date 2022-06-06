@@ -94,3 +94,20 @@ img {
 .back-card {
     transform: rotateY(180deg);
 }
+
+
+
+button {
+    /* background-color: #B6C599; */
+    width: 10rem;
+    height: 4rem;
+    cursor: pointer;
+    margin: 2rem;
+    font-size: 2rem;
+    border-radius: 10px;
+    border: double 5px #681343;
+    font-family: "Varela Round", sans-serif;
+    color: #681343;
+    font-weight: bold;
+
+}
