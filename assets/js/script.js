@@ -32,6 +32,7 @@ let disableFlipping = false;
 
 function flipCard() {
     if (disableFlipping) return;
+    if (this === card1) return;
     this.classList.add('flip');
 
     if (!cardIsFlipped) {
@@ -40,7 +41,6 @@ function flipCard() {
         return;
     };
     card2 = this;
-    cardIsFlipped = false;
 
     checkMatch();
 }
@@ -49,9 +49,6 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 
 // check if cards match
-
-
-
 function checkMatch() {
     let correctMatch = card1.dataset.character === card2.dataset.character;
 
@@ -62,24 +59,28 @@ function checkMatch() {
     };
 };
 
+// cards to remain flipped if they match
 function remainFlipped() {
     card1.removeEventListener('click', flipCard);
     card2.removeEventListener('click', flipCard);
+
+    nextTurn();
 }
 
+// cards to flip over if they do not match
 function flipOverCards() {
+    disableFlipping = true;
     setTimeout(() => {
         card1.classList.remove('flip');
         card2.classList.remove('flip');
+        nextTurn();
     }, 3000);
 }
 
-// }
-
-// Clicking cards to flip over
-
-// [...cards].forEach((card) => {
-//     card.addEventListener('click', function () {
-//         card.classList.toggle('flipCard');
-//     });
-// });
+// reset card values to next turn
+function nextTurn() {
+    cardIsFlipped = false;
+    disableFlipping = false;
+    card1 = null;
+    card2 = null;
+}
