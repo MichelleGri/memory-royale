@@ -1,9 +1,44 @@
+// create variables
+
+const cards = document.querySelectorAll('.card');
+const gameCards = document.querySelectorAll('.game-card');
+let card1;
+let card2;
+let cardIsFlipped;
+let disableFlipping;
+
+// scores variables
+
+let score;
+let highscore;
+
+// display message variable
+
+let displayMessage = function (message) {
+    document.querySelector('.message').textContent = message;
+};
+
 // Wait for the DOM to finish loading before running the game
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", startGame);
 
-    // display game board
-    const gameCards = document.querySelectorAll('.game-card');
+/* Set/reset all game parameters to their initial state. */
+
+function startGame() {
+
+    // initial variable values
+    score = 30;
+    highscore = 0;
+    cardIsFlipped = false;
+    disableFlipping = false;
+    displayMessage('🤩 Start playing!');
+
+    //  flip all cards to front 
+    for (let card of cards) {
+        card.classList.remove('flip');
+    };
+
+    cards.forEach(card => card.addEventListener('click', flipCard));
 
     // shuffle cards on game board
     function shuffle() {
@@ -13,51 +48,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     };
     shuffle();
-});
-
-/**
- * The main game "loop", called when the script is first loaded
- * and after the user's selections have been processed
- */
-
-// Creating variables
-
-const cards = document.querySelectorAll('.card');
-let card1;
-let card2;
-let cardIsFlipped = false;
-let disableFlipping = false;
-
-// display message variable
-
-let displayMessage = function (message) {
-    document.querySelector('.message').textContent = message;
 };
-
-// scores variables
-
-let score = 30;
-let highscore = 0;
 
 // play button (resets the game)
 
-document.querySelector('.play').addEventListener('click', function () {
-    score = 30;
-    gameCards.forEach(card => {
-        let randomCards = Math.trunc(Math.random() * gameCards.length);
-        card.style.order = randomCards;
-    });
+document.querySelector('.play').addEventListener('click', startGame);
 
-});
-
-// decrease score
+// function to decrease score after every incorrect macth
 
 function decreaseScore() {
     score--;
     document.querySelector('.score').textContent = score;
 };
 
-// Clicking cards to flip over
+// function for clicking cards to flip over
 
 function flipCard() {
     if (disableFlipping) return;
@@ -74,9 +78,7 @@ function flipCard() {
     checkMatch();
 };
 
-cards.forEach(card => card.addEventListener('click', flipCard));
-
-// check if cards match
+// function to check if cards match
 function checkMatch() {
     let correctMatch = card1.dataset.character === card2.dataset.character;
     if (correctMatch) {
@@ -89,8 +91,7 @@ function checkMatch() {
     };
 };
 
-
-// cards to remain flipped if they match
+// function for cards to remain flipped if they match
 function remainFlipped() {
     card1.removeEventListener('click', flipCard);
     card2.removeEventListener('click', flipCard);
@@ -98,7 +99,7 @@ function remainFlipped() {
     nextTurn();
 };
 
-// cards to flip over if they do not match
+// function for cards to flip over if they do not match
 function flipOverCards() {
     disableFlipping = true;
     setTimeout(() => {
@@ -108,10 +109,28 @@ function flipOverCards() {
     }, 3000);
 };
 
-// reset card values for next turn
+// function to reset card values for next turn
 function nextTurn() {
     cardIsFlipped = false;
     disableFlipping = false;
     card1 = null;
     card2 = null;
 };
+
+// function highscore() {
+//     if (score > highscore) {
+//         highscore = score;
+//         document.querySelector('.highscore').textContent = highscore;
+//     }
+// }
+
+// function endGame() {
+//     let endGame = document.querySelectorAll('.card')
+//     if (disableFlipping = true) {
+//         highscore();
+//         displayMessage(`✨ You won the game with ${score} score!`)
+//     } else if (score === 0) {
+//         displayMessage('💥 You lost the game! Try again!');
+//     }
+//     endGame();
+// };

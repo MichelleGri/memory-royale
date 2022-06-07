@@ -10,7 +10,7 @@
 }
 
 body {
-    max-width: 1500px;
+    max-width: 1000px;
     margin: 0.005rem auto;
     background-color: #eaefec;
     font-family: "Varela Round", sans-serif;
@@ -41,8 +41,8 @@ img {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    width: 1500px;
-    height: 1000px;
+    width: 1000px;
+    height: 800px;
     margin: 0 auto;
     padding: 2rem;
     border-radius: 1rem;
@@ -95,10 +95,7 @@ img {
     transform: rotateY(180deg);
 }
 
-
-
 .play {
-    /* background-color: #B6C599; */
     width: 10rem;
     height: 4rem;
     cursor: pointer;
@@ -118,10 +115,11 @@ img {
 .score-area {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     margin: 1.5rem;
     font-size: 1.2rem;
     color: #681343;
     font-weight: bold;
+    width: 1000px;
 }
