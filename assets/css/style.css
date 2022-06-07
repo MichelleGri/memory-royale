@@ -10,7 +10,7 @@
 }
 
 body {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0.005rem auto;
     background-color: #eaefec;
     font-family: "Varela Round", sans-serif;
@@ -18,15 +18,15 @@ body {
 }
 
 .logo {
-    height: 12rem;
+    height: 7rem;
     width: auto;
-    margin-bottom: 1rem;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: #681343;
-    padding: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
     letter-spacing: 0.1rem;
 }
 
@@ -101,11 +101,11 @@ img {
 }
 
 .play {
-    width: 10rem;
-    height: 4rem;
+    width: 8rem;
+    height: 3rem;
     cursor: pointer;
-    margin: 2rem;
-    font-size: 2rem;
+    margin: 1rem;
+    font-size: 1.5rem;
     border-radius: 10px;
     border: double 5px #681343;
     font-family: "Varela Round", sans-serif;
@@ -126,5 +126,5 @@ img {
     font-size: 1rem;
     color: #681343;
     font-weight: bold;
-    width: 1000px;
+    width: 800px;
 }
