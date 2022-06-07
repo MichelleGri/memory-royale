@@ -25,13 +25,14 @@ document.addEventListener("DOMContentLoaded", startGame);
 /* Set/reset all game parameters to their initial state. */
 
 function startGame() {
-
     // initial variable values
-    score = 30;
+    score = 20;
     highscore = 0;
     cardIsFlipped = false;
     disableFlipping = false;
     displayMessage('🤩 Start playing!');
+
+    document.querySelector('.score').textContent = score;
 
     //  flip all cards to front 
     for (let card of cards) {
@@ -40,14 +41,15 @@ function startGame() {
 
     cards.forEach(card => card.addEventListener('click', flipCard));
 
-    // shuffle cards on game board
-    function shuffle() {
-        gameCards.forEach(card => {
-            let randomCards = Math.trunc(Math.random() * gameCards.length);
-            card.style.order = randomCards;
-        });
-    };
     shuffle();
+};
+
+// shuffle cards on game board
+function shuffle() {
+    gameCards.forEach(card => {
+        let randomCards = Math.trunc(Math.random() * gameCards.length);
+        card.style.order = randomCards;
+    });
 };
 
 // play button (resets the game)
@@ -62,7 +64,6 @@ function decreaseScore() {
 };
 
 // function for clicking cards to flip over
-
 function flipCard() {
     if (disableFlipping) return;
     if (this === card1) return;
@@ -117,12 +118,13 @@ function nextTurn() {
     card2 = null;
 };
 
+// document.querySelector('.highscore').textContent = highscore;
+
 // function highscore() {
 //     if (score > highscore) {
 //         highscore = score;
-//         document.querySelector('.highscore').textContent = highscore;
-//     }
-// }
+//     };
+// };
 
 // function endGame() {
 //     let endGame = document.querySelectorAll('.card')
