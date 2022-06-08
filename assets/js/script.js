@@ -8,8 +8,8 @@ let disableFlipping;
 let matches;
 
 // scores variables
-let score;
-let highscore;
+let score = 10;
+let highscore = 0;
 
 // display message variable
 let displayMessage = function (message) {
@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", startGame);
 /* Set/reset all game parameters to their initial state. */
 function startGame() {
     // initial variable values
-    score = 20;
-    highscore = 0;
+    score = 10;
+    highscore;
     cardIsFlipped = false;
     disableFlipping = false;
     displayMessage('🤩 Start playing!');
@@ -76,33 +76,41 @@ function flipCard() {
 // function to check if cards match
 function checkMatch() {
     let correctMatch = card1.dataset.character === card2.dataset.character;
+    if (score > 0) {
+        if (!correctMatch) {
+            flipOverCards();
+            setTimeout(() => {
+                displayMessage('😊 Keep guessing!');
+            }, 500)
+            decreaseScore();
+        }
+        if (correctMatch) {
+            remainFlipped();
+            setTimeout(() => {
+                displayMessage(`🎉 That's a match!`);
+            }, 500)
+            matches++;
+            if ((matches * 2 === gameCards.length)) {
+                setTimeout(() => {
+                    displayMessage(`✨ You won the game with ${score} score!`);
+                }, 500)
 
-    if (correctMatch) {
-        remainFlipped();
-        setTimeout(() => {
-            displayMessage(`🎉 That's a match!`);
-        }, 500)
-    } else if (!correctMatch) {
-        flipOverCards();
-        setTimeout(() => {
-            displayMessage('😊 Keep guessing!');
-        }, 500)
-        decreaseScore();
-    }
-    if (correctMatch) {
-        matches++;
-    }
-    if ((matches * 2 === gameCards.length)) {
-        setTimeout(() => {
-            displayMessage(`✨ You won the game with ${score} score!`);
-        }, 500)
-    }
+                if (score > highscore) {
+                    highscore = score;
+                    document.querySelector('.highscore').textContent = highscore;
+                }
+            };
+        };
+        if (score === 0) {
+            setTimeout(() => {
+                displayMessage('💥 Game Over! Try again!');
+            }, 500)
 
-    if (score === 0) {
-        setTimeout(() => {
-            displayMessage('💥 Game Over! Try again!');
-        }, 500)
-    }
+            setTimeout(() => {
+                startGame();
+            }, 5000)
+        }
+    };
 };
 
 // function for cards to remain flipped if they match
@@ -111,7 +119,6 @@ function remainFlipped() {
     card2.removeEventListener('click', flipCard);
     nextTurn();
 };
-
 
 // function for cards to flip over if they do not match
 function flipOverCards() {
@@ -130,11 +137,3 @@ function nextTurn() {
     card1 = null;
     card2 = null;
 };
-
-// document.querySelector('.highscore').textContent = highscore;
-
-// function highscore() {
-//     if (score > highscore) {
-//         highscore = score;
-//     };
-// };
