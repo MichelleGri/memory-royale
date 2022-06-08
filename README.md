@@ -64,6 +64,25 @@ Memory Royale meets parents’ goals by:
 
 ## Designs
 
+## Surface
+
+### Colour Scheme
+The game was created with a very simple colour scheme of light green and burgundy. A colour picker was used on the Encanto logo to select the colours:
+
+![Colour image](README-files/logo.jpg)
+
+Three colours were chosen for the colour palette using the website [Canva](http://canva.com/colors). The image below displays the three colours with their HEX, RGB, and CMYK values. HEX values have been used in style.css file. 
+
+![Colour scheme](colour scheme placeholder)
+
+### Typography
+
+Only one font was imported from [Google Fonts](https://fonts.google.com/) into the style.css file: Varela Round to be used throughout the game. This font was chosen as it is appears soft and playful, and is easily readable for children. 
+
+### Imagery
+
+All imagery used within this game is relevant to the Disney movie Encanto. Emojis are also used to add playfulness and interest to the game.
+
 #### Image Links
 
 * [Encanto logo](https://logos.fandom.com/wiki/Encanto)
@@ -79,6 +98,16 @@ Memory Royale meets parents’ goals by:
 * [Bruno](https://en.wikipedia.org/wiki/Bruno_Madrigal)
 
 * [Camilo](https://www.cosplaycentral.com/topics/cosplay/guide/how-to-make-an-encanto-cosplay-from-the-new-disney-movie)
+
+## Skeleton
+
+### Layout
+
+* Layout of the site was designed with careful consideration to symmetry and spacing between all elements. The site follows symmetrical values of between 1 to 4 columns, depending on the device it is being viewed on. 
+
+* The max-width for the entire site is set to 800 pixels. This is to ensure the it displays well on larger screen sizes. 
+
+* Media queries have been applied at different screen-width break-points to ensure responsiveness. DevTools has been used to determine the break-points, which are set at points where the layout begins to distort.  Game cards columns decrease from 4 to 1 as screen sizes decrease, and the number of rows increases. 
 
 ***
 
@@ -118,20 +147,21 @@ The game can include different levels of difficulty – such as Easy, Medium, Ha
 * Gitpod.io – creating the website by writing code; creating a progress log by making commits using the command line and pushing to GitHub
 * GitHub – create a project repository
 
-### Design
+#### Design
 
-* Google Fonts– for styling the typography
-* Canva - for colour scheme and image editing
-* Microsoft Paint 3D – to resize and crop images
+* [Google Fonts](https://fonts.google.com/)– for styling the typography 
+* [Canva](https://www.canva.com/) - for colour scheme and image editing
+* Microsoft Paint 3D – to resize and crop images 
 
-### Testing
+#### Testing 
 
-* HTML Validator – testing validity of HTML code
-* CSS Validator - testing validity of CSS code
-* Am I Responsive – checking responsiveness of the site
-* Wave - checking accessibility of the site
-* Browser Stack - checking browser compatibility
+* [HTML Validator](https://validator.w3.org/) – testing validity of HTML code
+* [CSS Validator](https://jigsaw.w3.org/css-validator/) - testing validity of CSS code
+* [Am I Responsive](http://ami.responsivedesign.is/#) – checking responsiveness of the site
+* [Wave](https://wave.webaim.org/) - checking accessibility of the site
+* [Browser Stack](https://www.browserstack.com/) - checking browser compatibility
 * DEV Tools – Lighthouse check and responsiveness check on various screen sizes
+* Microsoft Excel - to create testing plan and instructions
 
 ***
 
