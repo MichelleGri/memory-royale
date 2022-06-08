@@ -92,7 +92,7 @@ function checkMatch() {
             matches++;
             if ((matches * 2 === gameCards.length)) {
                 setTimeout(() => {
-                    displayMessage(`✨ You won the game with ${score} score!`);
+                    displayMessage('✨ You won the game!');
                 }, 500)
 
                 if (score > highscore) {
@@ -103,7 +103,7 @@ function checkMatch() {
         };
         if (score === 0) {
             setTimeout(() => {
-                displayMessage('💥 Game Over! Try again!');
+                displayMessage('💥 Game Over!');
             }, 500)
 
             setTimeout(() => {
