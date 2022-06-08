@@ -5,7 +5,7 @@ let card1;
 let card2;
 let cardIsFlipped;
 let disableFlipping;
-let matches = 0;
+let matches;
 
 // scores variables
 let score;
@@ -27,6 +27,7 @@ function startGame() {
     cardIsFlipped = false;
     disableFlipping = false;
     displayMessage('🤩 Start playing!');
+    matches = 0;
 
     for (let card of cards) {
         card.classList.remove('flip');
@@ -88,7 +89,6 @@ function checkMatch() {
         }, 500)
         decreaseScore();
     }
-
     if (correctMatch) {
         matches++;
     }
@@ -97,7 +97,6 @@ function checkMatch() {
             displayMessage(`✨ You won the game with ${score} score!`);
         }, 500)
     }
-
 };
 
 // function for cards to remain flipped if they match
@@ -107,9 +106,6 @@ function remainFlipped() {
     nextTurn();
 };
 
-// function endGame() {
-//     if (cards.length === remainFlipped.length)
-// }
 
 // function for cards to flip over if they do not match
 function flipOverCards() {
@@ -134,22 +130,5 @@ function nextTurn() {
 // function highscore() {
 //     if (score > highscore) {
 //         highscore = score;
-//     };
-// };
-
-// // function to increase counter if cards match
-// function increaseCounter() {
-//     // variable to add match counts, maximum of 6 matches to complete and win game
-//     let matchCounter = 0;
-//     // variable to check if cards match
-//     let cardsMatch = card1.dataset.character === card2.dataset.character;
-//     // for every match, increase counter by 1
-
-//     if (cardsMatch) {
-//         matchCounter++;
-//         if (matchCounter === 6) {
-//             displayMessage(`✨ You won the game with ${score} score!`);
-//         }
-
 //     };
 // };
