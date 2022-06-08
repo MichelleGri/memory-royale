@@ -59,3 +59,159 @@ Memory Royale meets parents’ goals by:
 
 * The game provides the ability for children to develop their memory skills
 * It is simple and easy to use
+
+***
+
+## Features
+
+### Header
+
+The header appears at the top of the game page and includes three aspects: the game title/name (Memory Royale), a logo of the movie Encanto, and a ‘Play’ button. All these aspects are centred on the page to provide symmetry and consistency on the game page. The ‘Play!’ button allows the user to re-start the game at any point. 
+
+### Score Area Section
+The score area section includes three aspects: a message display that changes as the user plays the game, a score display, and a highscore display.
+Message – the message changes according to the following rules:
+When the user does not find a match between two cards:
+“Keep guessing!”
+When the user finds a match between two cards:
+“That’s a match!”
+When the user finishes the game by matching all cards:
+“You won the game!”
+When the user does not match all cards and the score equals to zero:
+“Game Over!”
+Emojis have been added to all these messages to increase user interest and engagement with the game.
+
+### Game Area
+The game is the main feature of the game and includes the game board. It is set against a light green background. This colour was chosen from the Encanto logo. There are 12 cards, all facing down as the game starts. The cards are white with a Disney Encanto logo. The cards layout includes 3 rows and 4 columns.
+
+### Future Features
+The game can include a selection of different themes to choose from. Buttons can be added to choose from different card decks. Examples of other themes may be other popular Disney or children’s movies: Turning Red, Luca, and Spiderman.
+The game can include different levels of difficulty – such as Easy, Medium, Hard. More or less cards can be placed on the game board depending on the level of difficulty.
+
+***
+
+## Technologies Used
+
+* HTML5 – used to mark-up the website using semantics
+* CSS3 – Cascading Style Sheets was used to create style
+* JavaScript – used to add interactivity, game features, and playing functions
+* Gitpod.io – creating the website by writing code; creating a progress log by making commits using the command line and pushing to GitHub
+* GitHub – create a project repository
+
+### Design
+
+* Google Fonts– for styling the typography
+* Canva - for colour scheme and image editing
+* Microsoft Paint 3D – to resize and crop images
+
+### Testing
+
+* HTML Validator – testing validity of HTML code
+* CSS Validator - testing validity of CSS code
+* Am I Responsive – checking responsiveness of the site
+* Wave - checking accessibility of the site
+* Browser Stack - checking browser compatibility
+* DEV Tools – Lighthouse check and responsiveness check on various screen sizes
+
+***
+
+## Testing
+
+Several tests were carried out to ensure the validity and usability of the game.
+
+### HTML Validator
+
+The W3c Markup Validation Service was used to check validity of HTML markup of the game. The results are displayed below.
+
+### CSS Validator
+
+The W3c CSS Validation Service was used to check validity of CSS code. The results are displayed below.
+
+### Am I responsive?
+
+The Am I responsive checker was used to test the responsive nature of the site's pages.
+
+### Lighthouse Test
+
+The Lighthouse Test on Developer Tools was used to test specific aspects of the website on desktop and mobile devices. 
+
+#### Desktop
+
+#### Mobile
+
+***
+
+## Deployment
+
+### Adding and Committing files in GitPod
+
+To add files to the repository:
+Type ‘git add .’ in the command line
+Type ‘git commit -m “This is the commit message” 
+Type ‘git push’
+
+The git commit message should clearly describe the changes made. 
+
+Pushing will send all work to the GitHub repository and automatically update changes made in GitPod to the deployed website. 
+
+### Deployment
+
+The steps below were followed to deploy this project:
+
+* Logged into GitHub
+* Clicked on the drop-down menu on the right top corner
+* Clicked on ‘Your repositories”
+* Clicked on the la-boulangerie repository
+* Clicked on the Settings tab above the repository
+* Clicked on the Pages link on the left side menu
+* Under the “Source”, selected None from the dropdown menu and then selected “Master Branch”
+* The page refreshed and a link to the deployed website appeared
+* Clicked on the link to open the deployed website
+
+## Known Bugs
+
+* 
+
+***
+
+## Acknowledgements
+
+### Credit
+
+Brian Macharia - I would like to thank my mentor Brian Macharia for his valuable feedback and suggestions. His guidance enabled me to plan and execute the project. 
+
+Tutor Support – I would like to thank the various tutors at the Code Institute tutor support for assisting me in solving problems and issues. 
+
+#### Media
+
+[Jonas Schmedtmann](https://www.udemy.com/course/the-complete-javascript-course/) - Udemy course - The Complete JavaScript Course 2022: From Zero to Expert
+
+[Traversy Media](https://www.youtube.com/c/TraversyMedia) – YouTube Channel – for providing informative videos on various HTML, CSS and JavaScript topics
+
+[Stack Overflow](https://stackoverflow.com/) – for trouble shooting and resolving code issues
+
+[Google Fonts](https://fonts.google.com/) – for fonts used throughout the website
+
+[Google Images](https://www.google.co.uk/imghp?hl=en&ogbl) - for Encanto logo and character images
+
+[Canva](https://www.canva.com/) – for choosing a colour scheme
+
+[W3school](https://www.w3schools.com/) – for HTML and CSS coding information and trouble shooting
+
+[HTML Validator](https://validator.w3.org/) – for testing validity of HTML code
+
+[CSS Validator](https://jigsaw.w3.org/css-validator/) – for testing validity of CSS code
+
+[Am I Responsive](http://ami.responsivedesign.is/) – for checking responsiveness on different screen sizes
+
+[Wave](https://wave.webaim.org/) - for checking accessibility of the site
+
+[Browser Stack](https://www.browserstack.com/) - for checking browser compatibility
+
+***
+
+### Content
+
+Code and Content (not already attributed): Michelle Griffiths
+
+
