@@ -5,6 +5,7 @@ let card1;
 let card2;
 let cardIsFlipped;
 let disableFlipping;
+let matches = 0;
 
 // scores variables
 let score;
@@ -74,6 +75,7 @@ function flipCard() {
 // function to check if cards match
 function checkMatch() {
     let correctMatch = card1.dataset.character === card2.dataset.character;
+
     if (correctMatch) {
         remainFlipped();
         setTimeout(() => {
@@ -85,9 +87,17 @@ function checkMatch() {
             displayMessage('😊 Keep guessing!');
         }, 500)
         decreaseScore();
-    } else if (count === 12) {
-        displayMessage(`✨ You won the game with ${score} score!`)
-    };
+    }
+
+    if (correctMatch) {
+        matches++;
+    }
+    if ((matches * 2 === gameCards.length)) {
+        setTimeout(() => {
+            displayMessage(`✨ You won the game with ${score} score!`);
+        }, 500)
+    }
+
 };
 
 // function for cards to remain flipped if they match
@@ -127,20 +137,19 @@ function nextTurn() {
 //     };
 // };
 
+// // function to increase counter if cards match
+// function increaseCounter() {
+//     // variable to add match counts, maximum of 6 matches to complete and win game
+//     let matchCounter = 0;
+//     // variable to check if cards match
+//     let cardsMatch = card1.dataset.character === card2.dataset.character;
+//     // for every match, increase counter by 1
 
+//     if (cardsMatch) {
+//         matchCounter++;
+//         if (matchCounter === 6) {
+//             displayMessage(`✨ You won the game with ${score} score!`);
+//         }
 
-
-// function endGame() {
-//     let endGame = document.querySelectorAll('.card')
-//     if (disableFlipping = true) {
-//         highscore();
-//         displayMessage(`✨ You won the game with ${score} score!`)
-//     } else if (score === 0) {
-//         displayMessage('💥 You lost the game! Try again!');
-//     }
-//     endGame();
-// };
-
-// else(cards.classList.contains('flip')) {
-//     displayMessage(`✨ You won the game with ${score} score!`)
+//     };
 // };
