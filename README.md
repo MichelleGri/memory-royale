@@ -62,6 +62,26 @@ Memory Royale meets parents’ goals by:
 
 ***
 
+## Designs
+
+#### Image Links
+
+* [Encanto logo](https://logos.fandom.com/wiki/Encanto)
+
+* [Mirabel](https://en.wikipedia.org/wiki/Mirabel_Madrigal)
+
+* [Isabela](https://disneynews.us/character/isabela-madrigal-encanto/)
+
+* [Luisa](https://www.piratesandprincesses.net/luisa-madrigal-has-become-incredibly-popular-with-many-encanto-fans/)
+
+* [Antonio](https://disney.fandom.com/wiki/Antonio_Madrigal)
+
+* [Bruno](https://en.wikipedia.org/wiki/Bruno_Madrigal)
+
+* [Camilo](https://www.cosplaycentral.com/topics/cosplay/guide/how-to-make-an-encanto-cosplay-from-the-new-disney-movie)
+
+***
+
 ## Features
 
 ### Header
