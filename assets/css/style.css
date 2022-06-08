@@ -1,7 +1,7 @@
+/* import font from Google for styling text on game */
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 /* Global style */
-
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +9,7 @@
     box-sizing: border-box;
 }
 
+/* general style added to multiple elements of the game */
 body {
     max-width: 800px;
     margin: 0.005rem auto;
@@ -34,6 +35,7 @@ img {
     border-radius: 10px;
 }
 
+/* styling for the main game area */
 .game-area {
     background-color: #B6C599;
     display: flex;
@@ -50,6 +52,7 @@ img {
     position: relative;
 }
 
+/* styling and animations for invididual game cards */
 .game-card {
     width: 170px;
     height: 170px;
@@ -101,6 +104,7 @@ img {
     height: 170px;
 }
 
+/* styling for the 'Play!' button */
 .play {
     width: 8rem;
     height: 3rem;
@@ -118,6 +122,7 @@ img {
     background-color: #B6C599;
 }
 
+/* Styling for the score area */
 .score-area {
     display: flex;
     flex-direction: row;
