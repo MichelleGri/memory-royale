@@ -97,6 +97,12 @@ function checkMatch() {
             displayMessage(`✨ You won the game with ${score} score!`);
         }, 500)
     }
+
+    if (score === 0) {
+        setTimeout(() => {
+            displayMessage('💥 Game Over! Try again!');
+        }, 500)
+    }
 };
 
 // function for cards to remain flipped if they match
