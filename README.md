@@ -10,7 +10,7 @@
 
 ## About
 
-Memory Royale is an engaging and entertaining memory card game for tweens, children between 10-12 years old. It is based on the popular Disney movie Encanto. The cards include characters from the movie. The game’s overall aim is to entertain, engages and stimulate children's minds to improve memory and information retention. 
+Memory Royale is an engaging and entertaining memory card game for tweens, children between 10-12 years old. It is based on the popular Disney movie Encanto. The cards include characters from the movie. The game’s overall aim is to entertain, engage and stimulate children's minds to improve memory and information retention. 
 
 
 ## Index - Table of Contents
@@ -79,6 +79,8 @@ Three colours were chosen for the colour palette using the website [Canva](http:
 
 Only one font, Varela Round, was imported from [Google Fonts](https://fonts.google.com/) into the style.css file to be used throughout the game. This font was chosen as it is appears soft and playful, and is easily readable for children. 
 
+![Google Font](README-files/google-font.JPG)
+
 ### Imagery
 
 All imagery used within this game is relevant to the Disney movie Encanto. Emojis are also used to add playfulness and interest to the game.
@@ -105,7 +107,7 @@ All imagery used within this game is relevant to the Disney movie Encanto. Emoji
 
 * Layout of the game was designed with careful consideration to symmetry and spacing between all elements. The game follows symmetrical values of between 1 to 4 columns, depending on the device it is being viewed on. 
 
-* The max-width for the entire site is set to 800 pixels. This is to ensure the it displays well on larger screen sizes. 
+* The max-width for the entire game is set to 800 pixels. This is to ensure the it displays well on larger screen sizes. 
 
 * Media queries have been applied at different screen-width break-points to ensure responsiveness. DevTools has been used to determine the break-points, which are set at points where the layout begins to distort.  Game cards columns decrease from 4 to 1 as screen sizes decrease, and the number of rows increases. 
 
@@ -115,38 +117,39 @@ All imagery used within this game is relevant to the Disney movie Encanto. Emoji
 
 ### Header
 
-The header appears at the top of the game page and includes three aspects: the game title "Memory Royale", a logo of the movie Encanto, and a ‘Play’ button. All these aspects are centred on the page to provide symmetry and consistency on the game page. The ‘Play!’ button allows the user to re-start the game at any point. 
+The header appears at the top of the game page and includes three aspects: the game title "Memory Royale", a logo of the movie Encanto, and a ‘Play!’ button. All these aspects are centred on the page to provide symmetry and consistency on the game page. The ‘Play!’ button allows the user to re-start the game at any time. 
 
 ![Header](README-files/header.JPG)
 
 ### Score Area
-The score area section includes three aspects: a message display that changes as the user plays the game, a score display, and a highscore display. Emojis have been added to all these messages to increase user interest and engagement with the game.
+The score area section includes three aspects: a message display that changes as the user plays the game, a score display, and a highscore display. Emojis have been added to all messages to increase user interest and engagement with the game. Message – the message changes according to the following rules:
+
+Message at the start of the game: "Start playing""
 
 ![Score Area](README-files/score-area.JPG)
 
-Message – the message changes according to the following rules:
-When the user does not find a match between two cards:
+When the player does not find a match between two cards:
 “Keep guessing!”
 
 ![Score Area message1](README-files/message-keep-guessing!.JPG)
 
-When the user finds a match between two cards:
+When the player finds a match between two cards:
 “That’s a match!”
 
 ![Score Area message2](README-files/message-that's-a-match!.JPG)
 
-When the user finishes the game by matching all cards:
+When the player finishes the game by matching all cards:
 “You won the game!”
 
 ![Score Area message3](README-files/message-you-won-the-game!.JPG)
 
-When the user does not match all cards and the score equals to zero:
+When the player does not match all cards and the score equals to zero:
 “Game Over!”
 
 ![Score Area message4](README-files/message-game-over!.JPG)
 
 ### Game Area
-The game is the main feature of the game and includes the game board. It is set against a light green background. This colour was chosen from the Encanto logo. There are 12 cards, all facing down as the game starts. The cards are white with a Disney Encanto logo. The cards layout includes 3 rows and 4 columns.
+The game area is the main feature of the game and includes the game board. It is set against a light green background. This colour was chosen from the Encanto logo. There are 12 cards, all facing down as the game starts, with a white background and a Disney Encanto logo. The cards layout includes 3 rows and 4 columns.
 
 #### Front Cards
 
@@ -186,7 +189,6 @@ The game is the main feature of the game and includes the game board. It is set 
 * [Am I Responsive](http://ami.responsivedesign.is/#) – checking responsiveness of the site
 * [Browser Stack](https://www.browserstack.com/) - checking browser compatibility
 * DEV Tools – Lighthouse check and responsiveness check on various screen sizes
-* Microsoft Excel - to create testing plan and instructions
 
 ***
 
@@ -216,12 +218,12 @@ Several tests were carried out to ensure the validity and usability of the game.
 
 ### Usability Testing
 
-The game was tested with 5 children aged between 10 and 12, and their parents. The testing was carried out of desktop, laptop, tablet, and iPhone and Samsung mobile screens. The users provided the following feedback regarding the game:
+The game was tested with 5 children aged between 10 and 12, and their parents. The testing was carried out on various desktop, laptop, tablet, and iPhone and Samsung mobile screen sizes. The users provided the following feedback regarding the game:
 
 * Easy to understand the game concept and how to play
-* 'Play!' button is working and starts the game
+* 'Play!' button is working and restarts the game
 * All cards flip over on click - only two at a time
-* Colours area pleasing and relevant to the game theme
+* Colours are pleasing and relevant to the game theme
 * User-friendly design layout
 * The game is entertaining, engaging, and fun to play
 * Readability and visibility of text and elements on different screen widths and devices is good
@@ -258,7 +260,11 @@ The Lighthouse Test on Developer Tools was used to test specific aspects of the 
 
 #### Desktop
 
+![Lighhouse Desktop](README-files/lighthouse-desktop.JPG)
+
 #### Mobile
+
+![Lighthouse Mobile](README-files/lighthouse-mobile.JPG)
 
 #### Browser Compatibility
 
@@ -295,9 +301,9 @@ The steps below were followed to deploy this project:
 
 ## Known Bugs
 
-* The main bug discovered was when the 'Play!' button was clicked to restart the game. The cards were taking longer to flip over than the shuffling to take place. Therefore, the play was able to see placement of the cards on a new game before they unflipped. This issue was resolved by adding a timeout method to the shuffling function. Now the shuffling takes place after all cards are unflipped. 
+* The main bug discovered was when the 'Play!' button was clicked to restart the game. The cards were taking longer to flip over than the shuffling. Therefore, the player was able to see placement of the cards on a new game before they unflipped. This issue was resolved by adding a timeout method to the shuffling function. Now the shuffling takes place after all cards are unflipped. 
 
-* The game was not ending when the score was decreased to zero. The score kept decreasing to negative numbers. This issue was resolved by add a 'game over' feature, and the game retarts after a few seconds.
+* The game was not ending when the score was decreased to zero. The score kept decreasing to negative numbers. This issue was resolved by adding a 'game over' feature, and the game retarts after a few seconds.
 
 * There are no other known bugs.
 
