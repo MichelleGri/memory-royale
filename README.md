@@ -77,7 +77,7 @@ Three colours were chosen for the colour palette using the website [Canva](http:
 
 ### Typography
 
-Only one font was imported from [Google Fonts](https://fonts.google.com/) into the style.css file: Varela Round to be used throughout the game. This font was chosen as it is appears soft and playful, and is easily readable for children. 
+Only one font, Varela Round, was imported from [Google Fonts](https://fonts.google.com/) into the style.css file to be used throughout the game. This font was chosen as it is appears soft and playful, and is easily readable for children. 
 
 ### Imagery
 
@@ -115,25 +115,49 @@ All imagery used within this game is relevant to the Disney movie Encanto. Emoji
 
 ### Header
 
-The header appears at the top of the game page and includes three aspects: the game title/name (Memory Royale), a logo of the movie Encanto, and a ‘Play’ button. All these aspects are centred on the page to provide symmetry and consistency on the game page. The ‘Play!’ button allows the user to re-start the game at any point. 
+The header appears at the top of the game page and includes three aspects: the game title "Memory Royale", a logo of the movie Encanto, and a ‘Play’ button. All these aspects are centred on the page to provide symmetry and consistency on the game page. The ‘Play!’ button allows the user to re-start the game at any point. 
 
-### Score Area Section
-The score area section includes three aspects: a message display that changes as the user plays the game, a score display, and a highscore display.
+![Header](README-files/header.JPG)
+
+### Score Area
+The score area section includes three aspects: a message display that changes as the user plays the game, a score display, and a highscore display. Emojis have been added to all these messages to increase user interest and engagement with the game.
+
+![Score Area](README-files/score-area.JPG)
+
 Message – the message changes according to the following rules:
 When the user does not find a match between two cards:
 “Keep guessing!”
+
+![Score Area message1](README-files/message-keep-guessing!.JPG)
+
 When the user finds a match between two cards:
 “That’s a match!”
+
+![Score Area message2](README-files/message-that's-a-match!.JPG)
+
 When the user finishes the game by matching all cards:
 “You won the game!”
+
+![Score Area message3](README-files/message-you-won-the-game!.JPG)
+
 When the user does not match all cards and the score equals to zero:
 “Game Over!”
-Emojis have been added to all these messages to increase user interest and engagement with the game.
+
+![Score Area message4](README-files/message-game-over!.JPG)
 
 ### Game Area
 The game is the main feature of the game and includes the game board. It is set against a light green background. This colour was chosen from the Encanto logo. There are 12 cards, all facing down as the game starts. The cards are white with a Disney Encanto logo. The cards layout includes 3 rows and 4 columns.
 
+Front Cards
+
+![Game Area Front](README-files/game-area.JPG)
+
+Back Cards
+
+![Game Area Back](README-files/game-area-back-cards.JPG)
+
 ### Future Features
+
 The game can include a selection of different themes to choose from. Buttons can be added to choose from different card decks. Examples of other themes may be other popular Disney or children’s movies: Turning Red, Luca, and Spiderman.
 The game can include different levels of difficulty – such as Easy, Medium, Hard. More or less cards can be placed on the game board depending on the level of difficulty.
 
@@ -172,13 +196,13 @@ Several tests were carried out to ensure the validity and usability of the game.
 
 ### HTML Validator
 
-The W3c Markup Validation Service was used to check validity of HTML markup of the game. The results are displayed below.
+The [W3c Markup Validation Service](https://validator.w3.org/) was used to check validity of HTML markup of the game. The results are displayed below.
 
 ![HTML Validation](README-files/html-validation.JPG)
 
 ### CSS Validator
 
-The W3c CSS Validation Service was used to check validity of CSS code. The results are displayed below.
+The [W3c CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to check validity of CSS code. The results are displayed below.
 
 ![CSS Validation](README-files/css-validation.JPG)
 
@@ -231,7 +255,11 @@ The steps below were followed to deploy this project:
 
 ## Known Bugs
 
-* 
+* The main bug discovered was when the play button was clicked to restart the game. The cards were taking longer than the card shuffling to take place. Therefore, the play was able to see placement of the cards on a new game before they unfliped. This issue was resolved by adding a timeout method to the shuffling function. Now the shuffling takes place after all cards are unfliped. 
+
+* The game was not ending when the score was decreased to zero. The score kept decreasing to negative numbers. This issue was resolved by add a 'game over' feature, and the game retarts after a few seconds.
+
+* There are no other known bugs.
 
 ***
 
