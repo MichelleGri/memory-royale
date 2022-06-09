@@ -4,7 +4,7 @@
 
 [GitHub Repo](https://github.com/MichelleGri/memory-royale)
 
-![About image]()
+![About image](README-files/about-image.JPG)
 
 ***
 
@@ -174,13 +174,23 @@ Several tests were carried out to ensure the validity and usability of the game.
 
 The W3c Markup Validation Service was used to check validity of HTML markup of the game. The results are displayed below.
 
+![HTML Validation](README-files/html-validation.JPG)
+
 ### CSS Validator
 
 The W3c CSS Validation Service was used to check validity of CSS code. The results are displayed below.
 
+![CSS Validation](README-files/css-validation.JPG)
+
+### JavaScript Validation
+
+The JavaScript code was validated using the ![JS Hint](https://jshint.com/) validation service. The suggested corrections were implemented.
+
 ### Am I responsive?
 
-The Am I responsive checker was used to test the responsive nature of the site's pages.
+The [Am I responsive](http://ami.responsivedesign.is/#) checker was used to test the responsive nature of the game on devices with different screen sizes. 
+
+![Game Responsiveness](README-files/responsiveness.JPG)
 
 ### Lighthouse Test
 
