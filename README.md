@@ -10,7 +10,7 @@
 
 ## About
 
-Memory Royale is an engaging and entertaining memory card game for tweens, children between 10-12 years old. It is based on the popular Disney movie Encanto. The cards include characters from the movie. The game’s overall aim is to entertain children in a game that engages and stimulates their minds to improve memory and information retention. 
+Memory Royale is an engaging and entertaining memory card game for tweens, children between 10-12 years old. It is based on the popular Disney movie Encanto. The cards include characters from the movie. The game’s overall aim is to entertain, engages and stimulate children's minds to improve memory and information retention. 
 
 
 ## Index - Table of Contents
@@ -67,7 +67,7 @@ Memory Royale meets parents’ goals by:
 ## Surface
 
 ### Colour Scheme
-The game was created with a very simple colour scheme of light green and burgundy. A colour picker was used on the Encanto logo to select the colours:
+The game was created with a very simple colour scheme of light green and burgundy. A colour picker was used on the Encanto logo to select the colours.
 
 ![Colour image](README-files/logo.jpg)
 
@@ -103,7 +103,7 @@ All imagery used within this game is relevant to the Disney movie Encanto. Emoji
 
 ### Layout
 
-* Layout of the site was designed with careful consideration to symmetry and spacing between all elements. The site follows symmetrical values of between 1 to 4 columns, depending on the device it is being viewed on. 
+* Layout of the game was designed with careful consideration to symmetry and spacing between all elements. The game follows symmetrical values of between 1 to 4 columns, depending on the device it is being viewed on. 
 
 * The max-width for the entire site is set to 800 pixels. This is to ensure the it displays well on larger screen sizes. 
 
@@ -184,7 +184,6 @@ The game is the main feature of the game and includes the game board. It is set 
 * [CSS Validator](https://jigsaw.w3.org/css-validator/) - W3C CSS Validation - testing validity of CSS code
 * [JavaScript Validator](https://jshint.com/) - JS Hint - testing the validity of JavaScript code
 * [Am I Responsive](http://ami.responsivedesign.is/#) – checking responsiveness of the site
-* [Wave](https://wave.webaim.org/) - checking accessibility of the site
 * [Browser Stack](https://www.browserstack.com/) - checking browser compatibility
 * DEV Tools – Lighthouse check and responsiveness check on various screen sizes
 * Microsoft Excel - to create testing plan and instructions
@@ -193,7 +192,43 @@ The game is the main feature of the game and includes the game board. It is set 
 
 ## Testing
 
-Several tests were carried out to ensure the validity and usability of the game.
+Several tests were carried out to ensure the validity and usability of the game. The game was tested by the developer, specific testing methods and tools, and other people. This was done to ensure the game is in working order and performs as expected. 
+
+### Checks carried out by the developer
+
+* The game page opens with all elements and game feature clearly visible and as expected.
+* The 'Play!' button restarts the game at any point.
+* Hover over effect on 'Play!' button is working and it turns to light green.
+* The cards are shuffled on game restart - by clicking "Play!" button or refreshing the browser.
+* The cards flip over when clicked - only two at a time.
+* The cards remain flipped if there is a match.
+* The score does not decrease if the cards match.
+* The cards unflip is they do not match.
+* The score is decreased by 1 when the cards do not match.
+* The highscore changes if the player wins the game and the current score if higher than the highscore.
+
+* The display message is "Start playing!" on game start.
+* The display message changes to "That's a match!" when the cards match.
+* The display message changes to "Keep guessing!" when the cards do not match.
+* The display message changes to "You won the game!" when all cards have been matched.
+* The display message changes to "Game Over!" when the score decreases to zero and the player has not matched all cards.
+* The game restarts after the "Game Over!" message.
+
+### Usability Testing
+
+The game was tested with 5 children aged between 10 and 12, and their parents. The testing was carried out of desktop, laptop, tablet, and iPhone and Samsung mobile screens. The users provided the following feedback regarding the game:
+
+* Easy to understand the game concept and how to play
+* 'Play!' button is working and starts the game
+* All cards flip over on click - only two at a time
+* Colours area pleasing and relevant to the game theme
+* User-friendly design layout
+* The game is entertaining, engaging, and fun to play
+* Readability and visibility of text and elements on different screen widths and devices is good
+
+All individuals gave positive responses and a few highlighted some issues to be considered: 
+
+* The score was set at 20 before testing. However, it was suggested that this number is too high and does not present a significant challenge. Therefore, the score number was decreased to 10.
 
 ### HTML Validator
 
@@ -299,8 +334,6 @@ Tutor Support – I would like to thank the various tutors at the Code Institute
 [JS Hint](https://jshint.com/) - for testing validity of JavaScript code
 
 [Am I Responsive](http://ami.responsivedesign.is/) – for checking responsiveness on different screen sizes
-
-[Wave](https://wave.webaim.org/) - for checking accessibility of the site
 
 [Browser Stack](https://www.browserstack.com/) - for checking browser compatibility
 
