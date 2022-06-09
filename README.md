@@ -246,7 +246,7 @@ The [W3c CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used 
 
 ### JavaScript Validation
 
-The JavaScript code was validated using the ![JS Hint](https://jshint.com/) validation service. The suggested corrections were implemented.
+The JavaScript code was validated using the [JS Hint](https://jshint.com/) validation service. The suggested corrections were implemented.
 
 ### Am I responsive?
 
