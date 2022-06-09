@@ -4,13 +4,13 @@
 
 [GitHub Repo](https://github.com/MichelleGri/memory-royale)
 
-![About image](README-files/about-image.JPG)
+![About image](README-files/about-image.jpg)
 
 ***
 
 ## About
 
-Memory Royale is an engaging and entertaining memory card game for tweens, children between 10-12 years old. It is based on the popular Disney movie Encanto. The cards include characters from the movie. The game’s overall aim is to entertain children in a game that entertains and stimulates their minds to improve memory and information retention. 
+Memory Royale is an engaging and entertaining memory card game for tweens, children between 10-12 years old. It is based on the popular Disney movie Encanto. The cards include characters from the movie. The game’s overall aim is to entertain children in a game that engages and stimulates their minds to improve memory and information retention. 
 
 
 ## Index - Table of Contents
@@ -73,7 +73,7 @@ The game was created with a very simple colour scheme of light green and burgund
 
 Three colours were chosen for the colour palette using the website [Canva](http://canva.com/colors). The image below displays the three colours with their HEX, RGB, and CMYK values. HEX values have been used in style.css file. 
 
-![Colour scheme](colour scheme placeholder)
+![Colour scheme](README-files/colour-scheme.JPG)
 
 ### Typography
 
@@ -148,18 +148,19 @@ When the user does not match all cards and the score equals to zero:
 ### Game Area
 The game is the main feature of the game and includes the game board. It is set against a light green background. This colour was chosen from the Encanto logo. There are 12 cards, all facing down as the game starts. The cards are white with a Disney Encanto logo. The cards layout includes 3 rows and 4 columns.
 
-Front Cards
+#### Front Cards
 
 ![Game Area Front](README-files/game-area.JPG)
 
-Back Cards
+#### Back Cards
 
 ![Game Area Back](README-files/game-area-back-cards.JPG)
 
 ### Future Features
 
-The game can include a selection of different themes to choose from. Buttons can be added to choose from different card decks. Examples of other themes may be other popular Disney or children’s movies: Turning Red, Luca, and Spiderman.
-The game can include different levels of difficulty – such as Easy, Medium, Hard. More or less cards can be placed on the game board depending on the level of difficulty.
+* The game can include a selection of different themes to choose from. Buttons can be added to choose from different card decks. Examples of other themes may be other popular Disney or children’s movies: Turning Red, Luca, and Spiderman.
+
+* The game can include different levels of difficulty – such as Easy, Medium, Hard. More or less cards can be placed on the game board depending on the level of difficulty.
 
 ***
 
@@ -224,6 +225,10 @@ The Lighthouse Test on Developer Tools was used to test specific aspects of the 
 
 #### Mobile
 
+#### Browser Compatibility
+
+The game was tested on Chrome, Firefox, Internet Explorer, Microsoft Edge, and Safari. The developer carried out manual tests by installing theses browsers and checking the site's compatibility. In addition, the [Browser Stack](https://www.browserstack.com/) website was also used. However, the free version of Browser Stack allows for 1 minute of usage only on each browser. The tests revealed that the site is compatible with all Chrome, Firefox, and Microsoft Edge browsers. The site images appear as different sizes on older versions of Safari and Internet Explorer. However, the content is readable and the user is able to navigate through the game.
+
 ***
 
 ## Deployment
@@ -255,7 +260,7 @@ The steps below were followed to deploy this project:
 
 ## Known Bugs
 
-* The main bug discovered was when the play button was clicked to restart the game. The cards were taking longer than the card shuffling to take place. Therefore, the play was able to see placement of the cards on a new game before they unfliped. This issue was resolved by adding a timeout method to the shuffling function. Now the shuffling takes place after all cards are unfliped. 
+* The main bug discovered was when the 'Play!' button was clicked to restart the game. The cards were taking longer to flip over than the shuffling to take place. Therefore, the play was able to see placement of the cards on a new game before they unflipped. This issue was resolved by adding a timeout method to the shuffling function. Now the shuffling takes place after all cards are unflipped. 
 
 * The game was not ending when the score was decreased to zero. The score kept decreasing to negative numbers. This issue was resolved by add a 'game over' feature, and the game retarts after a few seconds.
 
@@ -285,11 +290,13 @@ Tutor Support – I would like to thank the various tutors at the Code Institute
 
 [Canva](https://www.canva.com/) – for choosing a colour scheme
 
-[W3school](https://www.w3schools.com/) – for HTML and CSS coding information and trouble shooting
+[W3school](https://www.w3schools.com/) – for HTML, CSS, and JavaScript coding information and trouble shooting
 
 [HTML Validator](https://validator.w3.org/) – for testing validity of HTML code
 
 [CSS Validator](https://jigsaw.w3.org/css-validator/) – for testing validity of CSS code
+
+[JS Hint](https://jshint.com/) - for testing validity of JavaScript code
 
 [Am I Responsive](http://ami.responsivedesign.is/) – for checking responsiveness on different screen sizes
 
