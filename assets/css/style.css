@@ -35,6 +35,10 @@ img {
     border-radius: 10px;
 }
 
+.hidden {
+    display: none;
+}
+
 /* styling for the main game area */
 .game-area {
     background-color: #B6C599;

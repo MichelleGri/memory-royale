@@ -147,13 +147,13 @@ The game can include different levels of difficulty – such as Easy, Medium, Ha
 * Gitpod.io – creating the website by writing code; creating a progress log by making commits using the command line and pushing to GitHub
 * GitHub – create a project repository
 
-#### Design
+### Design
 
 * [Google Fonts](https://fonts.google.com/)– for styling the typography 
 * [Canva](https://www.canva.com/) - for colour scheme and image editing
 * Microsoft Paint 3D – to resize and crop images 
 
-#### Testing 
+### Testing 
 
 * [HTML Validator](https://validator.w3.org/) – testing validity of HTML code
 * [CSS Validator](https://jigsaw.w3.org/css-validator/) - testing validity of CSS code
