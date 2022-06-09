@@ -155,8 +155,9 @@ The game can include different levels of difficulty – such as Easy, Medium, Ha
 
 ### Testing 
 
-* [HTML Validator](https://validator.w3.org/) – testing validity of HTML code
-* [CSS Validator](https://jigsaw.w3.org/css-validator/) - testing validity of CSS code
+* [HTML Validator](https://validator.w3.org/) – W3C Markup Validation - testing validity of HTML code
+* [CSS Validator](https://jigsaw.w3.org/css-validator/) - W3C CSS Validation - testing validity of CSS code
+* [JavaScript Validator](https://jshint.com/) - JS Hint - testing the validity of JavaScript code
 * [Am I Responsive](http://ami.responsivedesign.is/#) – checking responsiveness of the site
 * [Wave](https://wave.webaim.org/) - checking accessibility of the site
 * [Browser Stack](https://www.browserstack.com/) - checking browser compatibility

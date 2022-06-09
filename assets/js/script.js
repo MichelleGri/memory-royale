@@ -33,7 +33,7 @@ function startGame() {
     // unflip any flipped over cards
     for (let card of cards) {
         card.classList.remove('flip');
-    };
+    }
 
     // select 'score' class from DOM to store game score
     document.querySelector('.score').textContent = score;
@@ -46,7 +46,7 @@ function startGame() {
     setTimeout(() => {
         shuffle();
     }, 500);
-};
+}
 
 // play button (resets the game)
 document.querySelector('.play').addEventListener('click', startGame);
@@ -57,13 +57,13 @@ function shuffle() {
         let randomCards = Math.trunc(Math.random() * gameCards.length);
         card.style.order = randomCards;
     });
-};
+}
 
 // function to decrease score after every incorrect match
 function decreaseScore() {
     score--;
     document.querySelector('.score').textContent = score;
-};
+}
 
 // function for clicking on cards to flip over
 function flipCard() {
@@ -74,10 +74,10 @@ function flipCard() {
         cardIsFlipped = true;
         card1 = this;
         return;
-    };
+    }
     card2 = this;
     checkMatch();
-};
+}
 
 /* main game play functionality:
  * function to check if cards match, 
@@ -96,7 +96,7 @@ function checkMatch() {
             flipOverCards();
             setTimeout(() => {
                 displayMessage('😊 Keep guessing!');
-            }, 500)
+            }, 500);
             decreaseScore();
         }
 
@@ -106,7 +106,7 @@ function checkMatch() {
             remainFlipped();
             setTimeout(() => {
                 displayMessage(`🎉 That's a match!`);
-            }, 500)
+            }, 500);
 
             // number of matches increases by 1
             // game is finished when all cards are matched and flipped over
@@ -114,36 +114,36 @@ function checkMatch() {
             if ((matches * 2 === gameCards.length)) {
                 setTimeout(() => {
                     displayMessage('✨ You won the game!');
-                }, 500)
+                }, 500);
 
                 // when game ends, if current score is higher than highscore, current score becomes the highscore
                 if (score > highscore) {
                     highscore = score;
                     document.querySelector('.highscore').textContent = highscore;
                 }
-            };
-        };
+            }
+        }
 
         // if score decreases to 0, player does not win, and the game is over
         if (score === 0) {
             setTimeout(() => {
                 displayMessage('💥 Game Over!');
-            }, 500)
+            }, 500);
 
             // if game is over, the game starts again after 5000 milliseconds
             setTimeout(() => {
                 startGame();
-            }, 5000)
+            }, 5000);
         }
-    };
-};
+    }
+}
 
 // function for cards to remain flipped if they match
 function remainFlipped() {
     card1.removeEventListener('click', flipCard);
     card2.removeEventListener('click', flipCard);
     nextTurn();
-};
+}
 
 // function for cards to unflip if they do not match
 // timeout set for cards to unflip after 3000 milliseconds to allow player to view and memorise the cards' positions
@@ -154,7 +154,7 @@ function flipOverCards() {
         card2.classList.remove('flip');
         nextTurn();
     }, 3000);
-};
+}
 
 // function to reset card values for next turn
 function nextTurn() {
@@ -162,4 +162,4 @@ function nextTurn() {
     disableFlipping = false;
     card1 = null;
     card2 = null;
-};
+}
